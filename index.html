@@ -1,0 +1,1806 @@
+<html lang="en">
+
+<head>
+  <script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+        return false;
+    }
+};
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShivamNox</title>
+  <script>
+function openLink(url) {
+    window.location.href = url;
+}
+</script>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+.circle{
+  height: 24px;
+}
+
+:root {
+  --primary-text-color: white;
+  --secondary-text-color: #B5D4EF;
+  --padding-inline-section: 30px;
+  --accent-color: red;
+  --accent-color-dark: rgb(39, 13, 45);
+}
+
+body {
+  font-family: 'Roboto' sans-serif;
+  color: var(--secondary-text-color);
+}
+
+h1 {
+  font-family: 'Merriweather' sans-serif;
+  color: var(--primary-text-color);
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+}
+
+p {
+  font-family: 'Roboto' sans-serif;
+  font-weight: 600;
+  font-size: 1.10rem;
+  line-height: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+/*Utility Class*/
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: var(--padding-inline-section);
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  
+}
+
+.hover-links {
+  color: var(--secondary-text-color);
+}
+
+.hover-links:hover {
+  transition: 0.2s ease-out;
+  color: rgb(88, 28, 127);
+}
+
+.hover-links-brand:hover {
+  transition: 0.3s ease-out;
+  color: rgb(124, 77, 156);
+}
+
+
+/*Header*/
+header {
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-section {
+  justify-content: center;
+  padding-block: 20px;
+  gap: 40px;
+}
+
+.header-left {
+  max-width: 40vw;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.header-left h1 {
+  font-size: 6rem;
+  margin-top: 20px;
+}
+
+.header-left p {
+  border-left: 1px solid grey;
+  padding-left: 10px;
+}
+
+.header-right img {
+  width: 100%;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-2.4rem);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.header-right{
+  gap: 10px;
+}
+
+/*Navbar*/
+
+nav {
+  padding-top: 20px;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 999;
+  background-color: white;
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0px !important;
+}
+
+.sidebar ul{
+  flex-direction: column;
+}
+
+.sidebar ul>li{
+  width: 100%;
+}
+
+.sidebar ul>li>a{
+  width: 100%;
+}
+
+.nav-toggle{
+  display: none;
+}
+
+.main-nav {
+  justify-content: space-between;
+  border: 0.1px solid grey;
+  border-radius: 50px;
+  padding: 5px var(--padding-inline-section);
+  background-color: rgba(44, 43, 43, 0.3);  
+}
+
+.main-nav:hover {
+  transition: 0.5s ease-out;
+  box-shadow: 0 0 5px grey;
+  filter: brightness(1.5);
+}
+
+.main-nav ul {
+  gap: 70px;
+}
+
+.my-logo img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.nav-contact {
+  justify-content: end;
+  border: 0.5px solid grey;
+  border-radius: 50px;
+  background-color: var(--accent-color);
+  transition: 0.3s ease-out;
+}
+
+.nav-contact:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.nav-contact a {
+  padding: 10px 10px;
+}
+
+.social-link ul {
+  flex-direction: column;
+  gap: 20px;
+  animation: 0.5s ease-out;
+}
+
+.logo-img:hover {
+  transition: 0.5s ease-out;
+  filter: brightness(5);
+}
+
+/*About-section*/
+
+.about-section {
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 20px;
+}
+
+.main-about {
+  justify-content: center;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-desc {
+  max-width: 40vw;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/*Skills-section*/
+
+.skill-section {
+  flex-wrap: wrap;
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 20px;
+}
+
+.skill-header {
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-circle {
+  gap: 20px;
+  padding: 20px var(--padding-inline-section);
+}
+
+.heading {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-block: 40px;
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.technical-bars .bar {
+  margin: 20px 0;
+}
+
+.technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  /* opacity: 0; */
+}
+
+.technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.progress-line.html span {
+  width: 95%;
+}
+
+.progress-line.css span {
+  width: 85%;
+}
+
+.progress-line.javascript span {
+  width: 90%;
+}
+
+.progress-line.nodejs span {
+  width: 80%;
+}
+
+.progress-line.react span {
+  width: 75%;
+}
+
+.progress-line.mongodb span {
+  width: 85%;
+}
+
+.progress-line.sql span {
+  width: 80%;
+}
+
+.progress-line.cpp span {
+  width: 97%;
+}
+
+.progress-line.python span {
+  width: 90%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.html span::after {
+  content: "95%";
+}
+
+.progress-line.css span::after {
+  content: "85%";
+}
+
+.progress-line.javascript span::after {
+  content: "90%";
+}
+
+.progress-line.nodejs span::after {
+  content: "80%";
+}
+
+.progress-line.react span::after {
+  content: "75%";
+}
+
+.progress-line.mongodb span::after {
+  content: "85%";
+}
+
+.progress-line.sql span::after {
+  content: "80%";
+}
+
+.progress-line.cpp span::after {
+  content: "97%";
+}
+
+.progress-line.python span::after {
+  content: "90%";
+}
+
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #fff;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.radial-bars {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.radial-bars .radial-bar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+
+}
+
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: white;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: red;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 120;
+  }
+}
+
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 120;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.progress-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Project-section*/
+
+.projects-section {
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 20px ;
+}
+
+.project-header {
+  justify-content: end;
+  gap: 20px;
+}
+
+.carousel{
+  height: 90vh;
+  margin-top: 40px;
+  width: 80vw;
+  overflow: hidden;
+  position: relative;
+  right: 50px;
+}
+.carousel .list .item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+  .carousel .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel .list .item .content{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: white;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .content .title{
+  font-size: 3.6em;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+/* thumbail */
+
+.thumbnail{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  gap: 20px;
+}
+.thumbnail .item{
+  width: 130px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+.thumbnail .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail .item .content{
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.thumbnail .item .content .title{
+  font-weight: 500;
+}
+/* arrows */
+.arrows{
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrows button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: .5s;
+}
+.arrows button:hover{
+  background-color: var(--accent-color-dark);
+  color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+  z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .des
+{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+  to{
+      transform: translateY(0px);
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+.carousel .list .item:nth-child(1) .content .title{
+  animation-delay: 1.2s!important;
+} 
+.carousel .list .item:nth-child(1) .content .topic{
+  animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+  animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+  animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+  to{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+  overflow: hidden;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+  z-index: 100;
+}
+@keyframes showThumbnail{
+  from{
+      width: 0;
+      opacity: 0;
+  }
+}
+.carousel.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+      transform: translateX(150px);
+  }
+}
+
+/* running time */
+
+.carousel .time{
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: var(--accent-color);
+  left: 0;
+  top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+  animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+  from{ width: 100%}
+  to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame{
+  to{
+      width: 150px;
+      height: 220px;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+  pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+  animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+  to{
+      transform: translateY(-150px);
+      filter: blur(20px);
+      opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .carousel .list .item .content{
+      padding-right: 0;
+  }
+  .carousel .list .item .content .title{
+      font-size: 30px;
+  }
+}
+/*form-section*/
+
+.form-section{
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.form-header{
+  text-align: center;
+  padding-block: 50px;
+}
+
+.wrapper{
+  width: 420px;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper .input-box{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px
+}
+
+.input-box input::placeholder{
+  color: #fff;
+}
+
+.input-box textarea{
+  width: 100%;
+  height: 140px;
+  padding: 20px 45px 20px 20px;
+  border: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  resize: none;
+}
+
+.contact-input:focus{
+  border: 2px solid var(--accent-color);
+}
+
+.input-box textarea::placeholder{
+  color: #fff;
+}
+
+
+.wrapper .btn{
+  width: 30%;
+  height: 45px;
+  background: red;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease-out;
+}
+
+.wrapper .btn:hover{
+  background-color: var(--accent-color-dark);
+}
+
+
+/*footer*/
+footer{
+  background-color: #000;
+  padding-block: 50px;
+}
+
+.footer-header{
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.footer-flex{
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.footer-link{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.link-hover{
+  transition: .8s;
+}
+
+.link-hover:hover{
+  color: var(--accent-color) !important;
+  transform: scale(1.3);
+  z-index: 2;
+}
+/*sub-footer*/
+.subfooter{
+  background-image: url('https://img.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_23-2149101395.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710720000&semt=ais');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 50px;
+}
+
+.subfooter .container{
+  justify-content: space-between;
+  border-top: 1px solid white;
+}
+
+.subfooter .container ul{
+  gap: 50px;
+  padding-block: 20px;
+}
+
+.subfooter p{
+  padding-top: 10px;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: black ;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#642bff, #ff22e6);
+  border-radius: 10px;
+}
+  </style>
+    <link rel="stylesheet" href="http://divyanshkaushal.me/mediaquery.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcQrkUQnFF0s3faHazwrX19Yj3CnyvIwR56CK5OtLD8sFmYbHviIWNN_CSbxRXFa8A9rkHMyZCsVoILNh3fOebg-6-L6gKBtK6Wm_-wR7f_i3paRfxRjHgJLkXB6UcCaM3K2nDKGz2ziFdDSR8Rlinu266dh0NyeYTIXkj7gZU2SV4AHfGMEAgHH8FqWg/s1917/57dbf0ec832d4f21bdc8323336cf5350.png">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+        
+        
+        
+        position: relative;
+}
+      .slider-container {
+            display: flex; /* Display sliders in a row */
+            justify-content: center; /* Center the sliders horizontally */
+            gap: 20px; /* Add some space between sliders */
+        }
+
+.slider {
+    width:100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color:black;
+    border-radius:10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+  width:100%;
+    max-width: 600px;
+    display: block;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: blue;
+}
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+
+}
+      @media screen and (max-width: 768px) {
+    .slider-container {
+        flex-wrap: wrap; /* Allow sliders to wrap onto multiple rows */
+    }
+
+    .slider {
+        width: 100%; /* Make sliders take up full width on smaller screens */
+        max-width: none; /* Remove max-width restriction */
+        margin-bottom: 20px; /* Add some spacing between sliders on smaller screens */
+    }
+}
+  </style>
+  <style>
+        .glowing-border {
+            position: relative;
+            width: 370px;
+            height: 370px;
+            margin: 10px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: inline;
+            text-align:center;
+           justify-content: center;
+              
+        }
+
+        .glowing-border img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .glowing-border:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            background-size: 400%;
+            z-index: 0;
+            filter: blur(5px);
+            animation: glowing-border 20s linear infinite;
+            border-radius: 15px; /* Slightly larger border-radius to cover the image's rounded corners */
+        }
+
+        @keyframes glowing-border {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .glowing-border:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #222;
+            border-radius: 100px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container nav-img">
+            <div class="main-nav sidebar">
+                <ul class="flex">
+                    <li onclick="hideSidebar()">
+                        <h2 style="text-align: center; padding-top: 20px;"><a href="#"><i
+                                    class="fa-solid fa-xmark link-hover" style="color: white;"></i></a></h2>
+                    </li>
+                    <li onclick="hideSidebar()"><a style="color: white;" href="#" class="link-hover active">Home</a>
+                    </li>
+                    <li onclick="hideSidebar()"><a style="color: white;" href="#about" class="link-hover">About Me</a>
+                    </li>
+                    <li onclick="hideSidebar()"><a style="color: white;" href="#skills" class="link-hover">Skills</a>
+                    </li>
+                    <li onclick="hideSidebar()"><a style="color: white;" href="#projects"
+                            class="link-hover">Projects</a></li>
+                </ul>
+                <div class="nav-contact link-hover">
+                    <a href="#contacts" style="color: white !important;">Contact Me</a>
+                </div>
+            </div>
+            <div class="main-nav flex">
+                <ul class="flex">
+                    <li><a href="#" class="my-logo">
+                            
+                        </a></li>
+                    <li class="hideOnMobile"><a href="#" class="hover-links active">Home</a></li>
+                    <li class="hideOnMobile"><a href="#about" class="hover-links">About Me</a></li>
+                    <li class="hideOnMobile"><a href="#skills" class="hover-links">Skills</a></li>
+                    <li class="hideOnMobile"><a href="#projects" class="hover-links">Projects</a></li>
+                </ul>
+                <div class="nav-contact hideOnMobile">
+                    <a href="#contacts" style="color: white !important;">Contact Me</a>
+                </div>
+                <a onclick="showSidebar()" href="#" class="nav-toggle hover-links"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+        <div class="container header-section flex">
+            <div class="header-left flex">
+                <h2><span class="multiple-text">Full stack Web Developer</span></h2>
+                <h1>Shivam Kumar</h1>
+                <p>I'm <span class="multiple-text"></span> <br>and I'm remotely work from <br>North India</p>
+            </div>
+            <div class="header-right flex">
+               
+        <img style="width:360px; height:360px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5zQAYcoLhGdQ6-ltaEKdQe8B_LIBQ9EW5NXAKl9V2PS5t-kuKU5zWO9WT_5h-Qls68JtcFMxQlSfhN2DTEWTmxvC-Ei4cc79cBBMvdC2WyhySRHy5c9VUvKfJc8IpikaGJPNgwhAyVesgImciVnnfB5Yxjd7-q7CyEGbMTdh8Mr4gbhc52n2n3u-VCI_N/s2217/Untitled-1.png" alt="Dynamic Border">
+
+                <div class="social-link">
+                    <ul class="flex">
+                        <li><a class="logo-img" href="https://github.com/shivamnox"><svg style="filter: brightness(2);"
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                                    viewBox="0,0,256,256" style="fill:#000000;">
+                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M25,2c-12.68866,0 -23,10.31134 -23,23c0,12.68867 10.31134,23 23,23c12.68867,0 23,-10.31133 23,-23c0,-12.68866 -10.31133,-23 -23,-23zM25,4c11.60734,0 21,9.39266 21,21c0,0.07137 -0.00515,0.14169 -0.00586,0.21289c-0.63961,-0.05904 -1.37863,-0.11511 -2.31836,-0.14844c-1.32872,-0.04712 -3.00352,-0.03347 -4.90234,0.06055c0.07041,-0.49035 0.11977,-0.98762 0.12109,-1.49805c0.09683,-1.87262 -0.53201,-3.62449 -1.55469,-5.17187c0.24707,-0.85373 0.5369,-1.93986 0.60938,-3.17187c0.0826,-1.40428 -0.03862,-2.96144 -1.16602,-4.01367l-0.28906,-0.26953h-0.39453c-2.68307,0 -4.51959,1.12321 -5.64258,2.01367c-1.6215,-0.62765 -3.44481,-1.01367 -5.45703,-1.01367c-2.02363,0 -3.86447,0.39142 -5.55273,1.01758c-1.12235,-0.89089 -2.96048,-2.01758 -5.64648,-2.01758h-0.39258l-0.28906,0.26758c-1.09819,1.01974 -1.19936,2.53418 -1.13086,3.93164c0.06041,1.23229 0.33345,2.35292 0.57617,3.24805c-1.03996,1.57759 -1.66406,3.37475 -1.66406,5.15234c0,0.51163 0.04758,1.01046 0.11719,1.50195c-1.80576,-0.08375 -3.41548,-0.09989 -4.69336,-0.05469c-0.9397,0.03324 -1.67878,0.08884 -2.31836,0.14844c-0.0006,-0.06534 -0.00586,-0.12983 -0.00586,-0.19531c0,-11.60733 9.39266,-21 21,-21zM14.39648,13.13086c2.01758,0.19118 3.53551,1.09211 4.23828,1.7168l0.46875,0.41406l0.57813,-0.23633c1.58145,-0.65119 3.34534,-1.02539 5.31836,-1.02539c1.97302,0 3.73739,0.37608 5.19922,1.01563l0.58594,0.25781l0.47852,-0.42578c0.70301,-0.6249 2.22351,-1.5261 4.24219,-1.7168c0.2684,0.44498 0.50163,1.07781 0.44531,2.03516c-0.0674,1.14572 -0.37387,2.39364 -0.60547,3.13477l-0.15039,0.48242l0.29883,0.4082c0.98947,1.34928 1.49398,2.80953 1.4082,4.35352l-0.00195,0.02734v0.02734c0,2.49545 -0.89861,4.49273 -2.8125,5.97266c-1.91384,1.47993 -4.93523,2.42773 -9.1875,2.42773c-4.25227,0 -7.27556,-0.94781 -9.18945,-2.42773c-1.91389,-1.47993 -2.81055,-3.4772 -2.81055,-5.97266c0,-1.46471 0.52892,-3.07601 1.50586,-4.4082l0.29297,-0.39844l-0.14062,-0.47461c-0.23173,-0.78787 -0.51577,-2.06426 -0.57227,-3.2168c-0.04699,-0.95862 0.17989,-1.56453 0.41016,-1.9707zM8.88477,26.02148c0.70669,0.00903 1.51669,0.04717 2.32813,0.08789c0.07753,0.3118 0.16593,0.61852 0.27344,0.91797c-3.30736,0.06975 -5.7816,0.40233 -7.30664,0.6875c-0.06448,-0.50035 -0.11584,-1.00482 -0.14453,-1.51562c1.12705,-0.10696 2.71584,-0.20499 4.84961,-0.17773zM41.11523,26.03711c2.13229,-0.02708 3.72049,0.07105 4.84766,0.17773c-0.02866,0.50348 -0.07914,1.00082 -0.14258,1.49414c-1.57954,-0.28977 -4.12064,-0.6223 -7.51367,-0.67578c0.1053,-0.29353 0.19299,-0.59498 0.26953,-0.90039c0.89512,-0.04798 1.76839,-0.08592 2.53906,-0.0957zM11.91211,28.01953c0.59674,1.1958 1.44941,2.26349 2.57617,3.13477c1.54054,1.19123 3.54334,2.02354 5.98828,2.46875c-0.31986,0.32865 -0.61078,0.68955 -0.86914,1.07031l-0.06055,-0.05273c0.0055,-0.0063 -0.49713,0.24525 -1.24805,0.3125c-0.75092,0.06725 -1.67721,0.04688 -2.49805,0.04688c-1.225,0 -1.76457,-0.57879 -2.62695,-1.63281c-0.47755,-0.64363 -1.05973,-1.16486 -1.625,-1.56055c-0.57881,-0.40517 -1.07257,-0.69113 -1.68359,-0.79297l-0.08203,-0.01367h-0.08398c-0.46667,0 -0.91824,0.03379 -1.33984,0.51563c-0.2108,0.24092 -0.3561,0.68694 -0.26172,1.06445c0.09438,0.37752 0.3332,0.6095 0.54688,0.75195c1.36672,0.91115 1.60826,2.71448 2.46484,4.31836c0.79992,1.59392 2.52629,2.34961 4.29102,2.34961h2.59961v4.80273c-7.03219,-2.4822 -12.33532,-8.59812 -13.66797,-16.09961c1.5309,-0.28835 4.09451,-0.63502 7.58008,-0.68359zM37.88281,28.02734c3.56273,0.0305 6.19824,0.37672 7.78711,0.66992c-1.33087,7.50424 -6.63585,13.6226 -13.66992,16.10547v-5.20312c0,-1.58457 -0.52036,-3.3319 -1.42578,-4.78906c-0.2749,-0.44241 -0.59827,-0.86081 -0.95898,-1.23633c2.31522,-0.45738 4.21713,-1.2754 5.69727,-2.41992c1.12432,-0.86939 1.97509,-1.93387 2.57031,-3.12695zM23.69922,34.09961h2.80078c0.81282,0 1.68042,0.64779 2.375,1.76563c0.69458,1.11783 1.125,2.61894 1.125,3.73438v5.79883c-1.60259,0.3908 -3.27621,0.60156 -5,0.60156c-1.72379,0 -3.39741,-0.21077 -5,-0.60156v-5.79883c0,-1.09074 0.46783,-2.5883 1.20898,-3.71094c0.74116,-1.12264 1.67741,-1.78906 2.49023,-1.78906zM12.30859,35.28125c0.86577,0.89801 1.91393,1.71875 3.49219,1.71875c0.77917,0 1.7517,0.02807 2.67578,-0.05469c0.00329,-0.00029 0.00648,-0.00166 0.00977,-0.00195c-0.12175,0.35 -0.21258,0.70217 -0.28906,1.05664h-2.79687c-1.23333,0 -2.10462,-0.44557 -2.50586,-1.24805l-0.00781,-0.01367l-0.00586,-0.01172c-0.1644,-0.30537 -0.38021,-0.91597 -0.57226,-1.44531z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></a></li>
+                        <li><a class="logo-img" href="https://www.linkedin.com/in/shivamnox/"><svg
+                                    style="filter: brightness(2);" x="0px" y="0px" width="20" height="20"
+                                    viewBox="0,0,256,256" style="fill:#000000;">
+                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(8.53333,8.53333)">
+                                            <path
+                                                d="M24,4h-18c-1.105,0 -2,0.895 -2,2v18c0,1.105 0.895,2 2,2h18c1.105,0 2,-0.895 2,-2v-18c0,-1.105 -0.895,-2 -2,-2zM10.954,22h-2.95v-9.492h2.95zM9.449,11.151c-0.951,0 -1.72,-0.771 -1.72,-1.72c0,-0.949 0.77,-1.719 1.72,-1.719c0.948,0 1.719,0.771 1.719,1.719c0,0.949 -0.771,1.72 -1.719,1.72zM22.004,22h-2.948v-4.616c0,-1.101 -0.02,-2.517 -1.533,-2.517c-1.535,0 -1.771,1.199 -1.771,2.437v4.696h-2.948v-9.492h2.83v1.297h0.04c0.394,-0.746 1.356,-1.533 2.791,-1.533c2.987,0 3.539,1.966 3.539,4.522z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></a></li>
+                        <li><a class="logo-img" href="https://www.blogger.com/"><svg style="filter: brightness(2);"
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                                    viewBox="0,0,256,256" style="fill:#000000;">
+                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path d="M44,20c-1.5,0 -2.5,-0.5 -3.5,-1.5c-1,-1 -1.5,-2.2 -1.5,-3.5c0,-1.1 -0.4,-2 -1.2,-2.8c-0.8,-0.8 -1.7,-1.2 -2.8,-1.2c-1.2,0 -2.4,0 -3.5,0c-1.1,0 -2.2,-0.5 -3.2,-1.2c-1.1,-0.8 -2.2,-1.3 -3.5,-1.3c-1.2,0 -2.4,0.4 -3.4,1.1c-1,0.8 -1.8,1.7 -2.3,2.8c-0.5,1.1 -0.8,2.2 -0.8,3.4c0,1.1 -0.5,2.2 -1.2,3.1c-0.8,1 -1.8,1.5 -2.8,1.5c-1.2,0 -2.3,0 -3.5,0c-2.2,0 -4.3,0.9 -5.9,2.4c-1.6,1.6 -2.5,3.7 -2.5,6v9.8c0,2.3 0.9,4.4 2.5,6c1.6,1.6 3.7,2.4 5.9,2.4c6.2,0 12.4,0 18.5,0c2.2,0 4.3,-0.9 5.9,-2.5c1.6,-1.6 2.5,-3.7 2.5,-5.9c0,-1.2 0,-2.4 0,-3.5c0,-1.1 0.4,-2.1 1.2,-2.9c0.8,-0.8 1.8,-1.2 2.8,-1.2c1.3,0 2.4,-0.5 3.3,-1.4c0.8,-0.8 1.4,-2 1.4,-3.3c0,-3.5 0,-7.1 0,-10.6c0,-2.2 -0.9,-4.3 -2.5,-5.9c-1.6,-1.6 -3.7,-2.4 -5.9,-2.4zM34.3,38.2c0,0.9 -0.3,1.7 -1,2.4c-0.7,0.6 -1.5,0.9 -2.4,0.9c-2.8,0 -5.7,0 -8.5,0c-2.8,0 -5.7,0 -8.5,0c-0.9,0 -1.7,-0.3 -2.4,-0.9c-0.6,-0.6 -1,-1.5 -1,-2.4c0,-0.9 0.3,-1.7 1,-2.4c0.7,-0.6 1.5,-0.9 2.4,-0.9c2.8,0 5.7,0 8.5,0c2.8,0 5.7,0 8.5,0c0.9,0 1.7,0.3 2.4,0.9c0.6,0.6 1,1.5 1,2.4zM37.7,25.8c-0.7,0.7 -1.5,1 -2.4,1c-1.5,0 -3,0 -4.5,0c-0.9,0 -1.7,-0.3 -2.4,-1c-0.7,-0.7 -1,-1.5 -1,-2.4c0,-1.5 0 -3 0 -4.5c0,-0.9 0.3,-1.7 1,-2.4c0.7,-0.7 1.5,-1 2.4,-1c1.5,0 3,0 4.5,0c0.9,0 1.7,0.3 2.4,1c0.7,0.7 1,1.5 1,2.4c0,1.5 0,3 0,4.5c0,0.9 -0.3,1.7 -1,2.4z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></a></li>
+
+
+                        <li><a class="logo-img" href="https://www.codechef.com"><svg
+                                    style="filter: brightness(2);" x="0px" y="0px" width="20" height="20"
+                                    viewBox="0,0,256,256" style="fill:#000000;">
+                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.33333,5.33333)">
+                                            <path
+                                                d="M35.178,33.008l0.073,0.026l-0.751,-0.326c-0.253,-0.115 -0.525,-0.182 -0.803,-0.197c-0.076,-0.01 -0.152,-0.01 -0.228,0c-0.148,0.013 -0.285,0.086 -0.378,0.202c-0.113,0.096 -0.185,0.231 -0.202,0.378c-0.011,0.032 -0.011,0.066 0,0.098c0.334,0.353 0.762,0.603 1.233,0.72c0.471,0.145 0.943,0.285 1.404,0.414c0.467,0.155 0.864,0.471 1.119,0.891c0.005,0.019 0.005,0.038 0,0.057c0,0.088 -0.212,0.233 -0.622,0.44c-0.207,0.119 -0.518,0.383 -1.036,0.777c-0.323,0.264 -0.67,0.498 -1.036,0.699c-0.311,0.139 -0.583,0.352 -0.793,0.622c-0.005,0.005 -0.009,0.01 -0.013,0.015c-0.165,0.19 -0.145,0.478 0.044,0.643c0.099,0.095 0.231,0.147 0.368,0.145c0.098,-0.002 0.193,-0.027 0.28,-0.073c0.668,-0.421 1.31,-0.883 1.922,-1.383c0.621,-0.514 1.267,-0.997 1.937,-1.445c0.373,-0.228 0.554,-0.466 0.554,-0.71c-0.012,-0.163 -0.1,-0.311 -0.238,-0.399c-0.816,-0.733 -1.784,-1.278 -2.834,-1.594zM14.183,37.742l-2.144,-0.942c-0.711,-0.302 -1.404,-0.648 -2.072,-1.036c0.469,-0.584 1.1,-1.016 1.813,-1.243c0.709,-0.228 1.363,-0.6 1.922,-1.093c0.08,-0.077 0.125,-0.184 0.124,-0.295c-0.004,-0.157 -0.078,-0.303 -0.202,-0.399c-0.148,-0.114 -0.331,-0.174 -0.518,-0.171h-0.3c-0.662,0.497 -1.386,0.904 -2.155,1.212c-0.762,0.314 -1.483,0.717 -2.15,1.202c-0.323,0.289 -0.511,0.701 -0.518,1.134c0.038,0.164 0.154,0.3 0.311,0.363c0.14,0.047 0.285,0.104 0.425,0.161c1.416,0.601 2.745,1.247 3.989,1.937c0.165,0.12 0.32,0.251 0.466,0.394c0.095,0.041 0.197,0.063 0.3,0.062c0.255,0.002 0.503,-0.086 0.699,-0.249c0.2,-0.143 0.305,-0.383 0.275,-0.627c0.008,-0.179 -0.098,-0.343 -0.265,-0.41zM21.984,32.531v-0.01c-0.176,-0.274 -0.397,-0.518 -0.653,-0.72c-0.205,-0.143 -0.45,-0.217 -0.699,-0.212c-0.084,-0.002 -0.167,0.014 -0.243,0.047l-1.554,0.518c-0.099,0.031 -0.202,0.045 -0.306,0.041c-0.184,0.013 -0.367,-0.038 -0.518,-0.145c-0.188,-0.164 -0.348,-0.358 -0.471,-0.575l-0.43,0.29c0.182,0.305 0.417,0.575 0.694,0.798c0.218,0.137 0.473,0.204 0.73,0.192c0.131,-0.001 0.262,-0.02 0.388,-0.057l1.435,-0.518c0.097,-0.038 0.201,-0.057 0.306,-0.057c0.158,-0.01 0.314,0.032 0.445,0.119c0.181,0.148 0.338,0.322 0.466,0.518zM26.403,40.861c-2.346,-0.13 -2.808,1.906 -1.171,3.367c2.367,2.129 8.127,1.663 7.34,-3.051c-2.89,2.455 -4.097,-0.207 -6.169,-0.316zM21.239,40.861c-2.072,0.109 -3.279,2.771 -6.169,0.316c-0.787,4.714 4.973,5.18 7.34,3.051c1.636,-1.461 1.175,-3.497 -1.171,-3.367zM19.757,34.065c-0.418,-0.016 -0.825,0.133 -1.134,0.414c-0.35,0.343 -0.498,0.842 -0.394,1.321c0.051,0.451 0.231,0.877 0.518,1.228c0.244,0.327 0.628,0.519 1.036,0.518c0.267,-0.005 0.529,-0.076 0.761,-0.207c0.466,-0.28 0.694,-0.808 0.694,-1.601c0.06,-0.52 -0.128,-1.038 -0.508,-1.399c-0.288,-0.19 -0.628,-0.285 -0.973,-0.274zM19.736,36.214c-0.286,0 -0.518,-0.232 -0.518,-0.518c0,-0.286 0.232,-0.518 0.518,-0.518c0.286,0 0.518,0.232 0.518,0.518c0,0.286 -0.232,0.518 -0.518,0.518zM24.984,40.182c0.106,-0.085 0.204,-0.179 0.295,-0.28c0.085,-0.096 0.162,-0.2 0.228,-0.311c0.063,-0.097 0.118,-0.2 0.166,-0.306c0.036,-0.077 0.066,-0.156 0.088,-0.238v-0.047c-0.011,-0.014 -0.019,-0.03 -0.026,-0.047c-0.135,0.207 -0.303,0.391 -0.497,0.544c-0.149,0.14 -0.325,0.248 -0.518,0.316c-0.195,0.067 -0.4,0.101 -0.606,0.098c-0.175,0.003 -0.35,-0.021 -0.518,-0.073c-0.144,-0.046 -0.279,-0.116 -0.399,-0.207c-0.121,-0.097 -0.231,-0.209 -0.326,-0.332c-0.1,-0.135 -0.187,-0.279 -0.259,-0.43c-0.011,0.012 -0.02,0.026 -0.026,0.041c0,0 0,0.031 0,0.041c0.071,0.198 0.161,0.389 0.269,0.57c0.098,0.174 0.22,0.332 0.363,0.471c0.128,0.134 0.279,0.244 0.445,0.326c0.164,0.069 0.34,0.108 0.518,0.114l0.021,0.021c0.143,0.001 0.286,-0.026 0.42,-0.078c0.128,-0.046 0.25,-0.112 0.362,-0.193zM27.827,37.515c0.267,-0.004 0.529,-0.075 0.761,-0.207c0.51,-0.364 0.778,-0.979 0.699,-1.601c-0.026,-0.699 -0.192,-1.171 -0.518,-1.399c-0.288,-0.192 -0.628,-0.289 -0.974,-0.28c-0.419,-0.014 -0.826,0.136 -1.134,0.42c-0.348,0.344 -0.495,0.843 -0.388,1.321c0.048,0.451 0.228,0.879 0.518,1.228c0.245,0.326 0.629,0.518 1.036,0.518zM27.631,35.235c0.286,0 0.518,0.232 0.518,0.518c0,0.286 -0.232,0.518 -0.518,0.518c-0.286,0 -0.518,-0.232 -0.518,-0.518c0,-0.286 0.232,-0.518 0.518,-0.518zM33.713,29.175c0.196,-0.997 0.27,-2.576 0.212,-3.919l0.05,-0.245c0.071,-0.349 0.144,-0.701 0.218,-1.052c0.726,-1.586 2.016,-3.155 3.265,-4.674c2.083,-2.533 4.238,-5.152 4.044,-8.201c-0.013,-0.203 -0.067,-0.402 -0.16,-0.584c-0.308,-0.605 -0.647,-1.19 -1.068,-1.842l-0.085,-0.134c-0.098,-0.152 -0.196,-0.305 -0.297,-0.45c-0.074,-0.105 -0.148,-0.204 -0.223,-0.303l-0.092,-0.123c-0.156,-0.209 -0.312,-0.415 -0.467,-0.604c-0.075,-0.093 -0.151,-0.18 -0.289,-0.338c-0.177,-0.205 -0.355,-0.402 -0.538,-0.592l-0.241,-0.243c-0.21,-0.208 -0.421,-0.405 -0.623,-0.582l-0.155,-0.136c-2.626,-2.239 -5.3,-2.825 -6.927,-3.181l-0.897,-0.202c-2.788,-0.534 -5.791,-0.97 -8.86,-0.53c-0.036,0.006 -0.072,0.012 -0.108,0.02c-1.176,0.257 -2.31,0.669 -3.295,1.188c-1.179,0.535 -2.398,1.09 -3.443,1.164c-0.09,0.006 -0.18,0.021 -0.268,0.044c-1.733,0.446 -3.227,1.517 -4.18,2.975l-0.143,0.207c-0.048,0.067 -0.09,0.139 -0.125,0.213c-0.837,1.75 -1.06,3.754 -0.627,5.644c0.008,0.035 0.017,0.069 0.028,0.104c0.275,0.902 0.602,1.763 0.917,2.594l0.106,0.276c0.714,1.676 1.233,3.438 1.544,5.236c0.025,0.146 0.072,0.287 0.139,0.42c0.293,0.581 0.523,1.196 0.683,1.827c0.004,0.016 0.028,0.101 0.033,0.117c0.074,0.254 0.149,0.515 0.229,0.777c0.031,0.1 0.071,0.194 0.119,0.282c0.014,0.083 0.024,0.167 0.052,0.249l1.318,3.769c0.142,0.404 0.449,0.729 0.844,0.892c0.396,0.162 0.841,0.148 1.227,-0.037c2.406,-1.17 8.039,-3.906 15.817,0.958c0.242,0.151 0.518,0.229 0.795,0.229c0.203,0 0.406,-0.041 0.597,-0.124c0.452,-0.199 0.78,-0.605 0.874,-1.089zM38.513,11.562c-0.058,1.79 -1.67,3.75 -3.371,5.818c-0.309,0.376 -0.62,0.757 -0.927,1.14c1.124,-2.914 2.201,-5.829 3.18,-8.779l0.039,0.053c0.077,0.11 0.152,0.229 0.228,0.347l0.093,0.146c0.292,0.452 0.537,0.864 0.758,1.275zM35.437,7.54c0.166,0.145 0.332,0.301 0.494,0.462l0.194,0.195c0.144,0.149 0.286,0.308 0.428,0.471c0.001,0.002 0.066,0.077 0.068,0.078l0.167,0.196c0.09,0.11 0.178,0.228 0.266,0.345c-1.627,1.372 -3.858,6.483 -4.474,11.472c-0.169,0.257 -0.34,0.512 -0.494,0.776c-0.676,-0.448 -1.536,-0.845 -2.587,-1.179c-0.2,-0.064 -0.416,-0.121 -0.628,-0.18c0.149,-2.12 0.346,-4.308 0.538,-6.303c0.637,-3.375 2.224,-5.181 2.933,-8.222c0.947,0.372 1.963,0.92 2.983,1.79zM29.726,4.909c0.644,0.141 1.395,0.312 2.202,0.594c-1.39,2.614 -2.329,5.447 -2.774,8.381c-0.311,2.065 -0.466,4.148 -0.49,6.234c-1.169,-0.308 -2.5,-0.533 -3.897,-0.646c-0.041,-1.02 -0.064,-1.996 -0.021,-2.583c0.158,-2.187 0.341,-8.74 1.566,-12.598c0.81,0.11 1.643,0.25 2.518,0.417zM26.126,4.265c-2.633,4.386 -2.254,10.092 -1.601,15.187c-0.949,-0.068 -1.923,-0.083 -2.898,-0.031c-0.521,-3.135 -1.057,-6.924 -1.519,-9.945c-0.146,-1.439 -0.019,-2.892 0.373,-4.284c0.177,-0.381 0.279,-0.684 0.372,-0.928c0.07,-0.017 0.137,-0.045 0.207,-0.061c1.655,-0.23 3.301,-0.167 5.066,0.062zM18.495,5.143c0.532,-0.279 1.095,-0.493 1.668,-0.676c-0.14,0.259 -0.26,0.552 -0.356,0.881c-0.35,1.447 -0.469,2.94 -0.352,4.424c0.219,3.282 0.796,6.523 1.676,9.686c-0.911,0.069 -1.815,0.195 -2.689,0.392c-0.51,-2.158 -0.421,-4.552 -0.62,-6.795c-0.21,-2.68 -1.073,-5.216 -2.179,-6.786c0.983,-0.29 1.941,-0.711 2.852,-1.126zM14.104,6.592c0.464,-0.044 0.922,-0.148 1.377,-0.273c1.078,1.567 1.303,4.042 1.545,6.74c0.196,2.26 0.414,4.672 1.161,6.846c-0.742,0.18 -1.462,0.409 -2.141,0.696c-0.473,-1.914 -0.737,-4.005 -1.128,-5.916c-0.58,-2.828 -0.658,-5.361 -1.616,-6.133c-0.282,-0.39 -0.923,-0.457 -0.996,-0.888c0.496,-0.5 1.11,-0.874 1.798,-1.072zM14.424,21.466c-0.151,-0.438 -0.319,-0.87 -0.52,-1.288c-0.354,-1.952 -0.925,-3.861 -1.679,-5.629l-0.084,-0.222c-0.292,-0.769 -0.593,-1.563 -0.836,-2.352c-0.258,-1.18 -0.127,-2.426 0.372,-3.526l0.095,-0.137c0.08,-0.122 0.177,-0.227 0.268,-0.339c-0.003,0.076 -0.019,0.151 -0.012,0.227c0.03,0.188 0.104,0.365 0.218,0.518c0.948,0.756 1.44,3.16 2.015,5.978c0.398,1.95 0.859,4.085 1.524,6.031c-0.479,0.216 -0.932,0.463 -1.361,0.739zM22.646,24.365c-2.859,0 -5.176,0.746 -6.8,1.433l-0.466,-1.331c2.167,-1.862 6.097,-2.271 9.242,-2.005c3.502,0.3 5.826,1.354 6.218,1.896c0.031,0.204 0.052,0.447 0.07,0.704c-0.034,0.209 -0.022,0.414 0.028,0.608c0.007,0.252 0.01,0.508 0.007,0.769c-3.093,-1.543 -5.89,-2.074 -8.299,-2.074z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></a></li>
+
+                        <li><a class="logo-img" href="https://codeforces.com/"><svg width="20"
+                                    height="20" viewBox="0 0 24 24" style="fill:#361E4C;">
+                                    <path
+                                        d="M6 21H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1z">
+                                    </path>
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section" id="about">
+        <div class="container flex main-about">
+            <div class="about-image">
+                <img src="http://divyanshkaushal.me/images/about.png" alt="#">
+            </div>
+            <div class="about-desc flex">
+                <h1>About Me&nbsp;<i class="fa-solid fa-arrow-right"></i></h1>
+                <p>
+                    Hello, I'm Shivam Kumar a Full Stack Developer, my expertise is also lie on Machine Learning.
+                    I've been on an incredible journey of growth and learning. Right now I have worked in three project
+                    with my colleague in Daily Expense Tracker, Real time people count and Read Smart - Personalised
+                    Book Recommedation System. When I'm not immersed in my expertise, you'll find me in Playing Cricket,
+                    Travelling, Gymming & Listening Music.</p>
+                <div class="nav-contact">
+                    <a href="#contacts" style="color: white !important;">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="skill-section" id="skills">
+        <div class="skill-header flex container">
+            <h1>My Skills</h1>
+            <h1><i class="fa-solid fa-arrow-left"></i></h1>
+        </div>
+
+        <div class="skill-circle flex container">
+            <div class="container">
+                <h2 class="heading">Technical Skills</h2>
+                <div class="technical-bars">
+                    <div class="bar">
+                        <i class='bx bxl-html5'></i>
+                        <div class="info">
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-line html">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-css3'></i>
+                        <div class="info">
+                            <span>CSS<span>
+                        </div>
+                        <div class="progress-line css">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-javascript'></i>
+                        <div class="info">
+                            <span>Javascript</span>
+                        </div>
+                        <div class="progress-line javascript">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-nodejs'></i>
+                        <div class="info">
+                            <span> Nodejs</span>
+                        </div>
+                        <div class="progress-line nodejs">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-react'></i>
+                        <div class="info">
+                            <span>React</span>
+                        </div>
+                        <div class="progress-line react">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-mongodb'></i>
+                        <div class="info">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="progress-line mongodb">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <i class="fa-solid fa-database"></i>
+                        <div class="info">
+                            <span>SQL</span>
+                        </div>
+                        <div class="progress-line sql">
+                            <span></span>
+                        </div>
+                    </div>
+<div class="bar">
+                        <i class='bx bxl-css3'></i>
+                        <div class="info">
+                            <span>PHP<span>
+                        </div>
+                        <div class="progress-line css">
+                            <span></span>
+                        </div>
+                    </div>
+                          
+                    <div class="bar">
+                        <i class='bx bxl-c-plus-plus'></i>
+                        <div class="info">
+                            <span>C++</span>
+                        </div>
+                        <div class="progress-line cpp">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="bar">
+                        <i class='bx bxl-python'></i>
+                        <div class="info">
+                            <span>Python</span>
+                        </div>
+                        <div class="progress-line python">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="heading">Professional Skills</h2>
+                <div class="radial-bars flex">
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">75%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">85%</div>
+                        <div class="text">Leadership</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">95%</div>
+                        <div class="text">Time Management</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">75%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+       <div  class="container">
+            <div class="project-header flex">
+                <h1>Projects</h1>
+                <h1><i class="fa-solid fa-arrow-down"></i></h1>
+            </div>
+<br/>
+          <div class="slider-container">
+            
+            <div> <p Style="margin:10px;text-align:center;font-size:20px;">Web Projects</p>
+  <div class="slider">
+        <div class="slides">
+             <div class="slide"><a onclick="openLink('/Portfolio/hivajoy.html')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcPs_rXtc9SpntGOz2vt91mq-8Al-mi6V7qaMvN-g11jnqMSGuKJZ798he9BhnxxV1-LjDnEEQVRFnf96zbbffvNwaoMcesnZSQfoFy4B5PQrT4YyCSXJBk1HCKZ4cKt3xCYbcPZIHR2hhVAaeVQzhQHlhACa0uzeiwFjvHZEBjT5jqdgq7JTcpzvAMzKu/s651/IMG_20240609_002114.jpg" alt="Image 1"> <div><p style="color:#ccc;text-align: left;margin-bottom:20px; margin-top:5px; padding:0px  10px;"><span style="color:orange;">Hivajoy</span> is a dynamic entertainment project where we maximize your free time with movies, series, live TV channels, online radio, and more. Dive into a world of amazing content designed to bring joy and relaxation to your everyday life. Experience entertainment like never before with Hivajoy!</p><p style="color:#ccc;text-align: center;margin-bottom:20px; margin-top:5px; padding:0px  10px;"><span style="background:red;color:white; padding:4px 8px;border-top-left-radius:10px;border-bottom-right-radius:10px;">See More</span><br/><br/></p ></div></a></div>
+            <div class="slide"><a onclick="openLink('https://hivabytes.blogspot.com')"><img src="https://timesproweb-static-backend-prod.s3.ap-south-1.amazonaws.com/Web_Development_Banner_Image_0e476d1ab6.webp" alt="Image 2">
+          <div><p style="color:#ccc;text-align: center;margin-bottom:20px; margin-top:5px;">A Amazing Web Development Environment for develop your best animated or simple web... <br/><br/><span style="background:red;color:white; padding:4px 8px;border-top-left-radius:10px;border-bottom-right-radius:10px;">See More</span><br/><br/></p ></div></a>
+          </div>
+            
+          
+        </div>
+        <div class="indicators">
+            <span class="indicator" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            
+        </div>
+      <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+ 
+    </div></div>
+         
+            <div> <p Style="margin:10px;text-align:center;font-size:20px;">Graphic Projects</p>
+           <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/86f9b0ba-5c08-4394-ba51-8843530e7d70/04-in-pieces-opt.jpg" alt="Image 1"> <div><p style="color:#ccc;text-align: center;margin-bottom:20px; margin-top:5px;">I specialize in graphic design, creating eye-catching posters, banners, logos, and social media graphics. My projects blend creativity and precision to deliver visually stunning results that captivate audiences. Let's transform your ideas into compelling visual content that stands out and makes a lasting impact.<br/><br/><span style="background:red;color:white; padding:4px 8px;border-top-left-radius:10px;border-bottom-right-radius:10px;">See More</span><br/><br/></p ></div></div>
+            <div class="slide"><img src="https://infocusfilmschool.com/wp-content/uploads/2020/05/Copy-of-VFX-Diploma-Program-2.png" alt="Image 2">
+          <div><p style="color:#ccc;text-align: center;margin-bottom:20px; margin-top:5px;">I specialize in graphic design, creating eye-catching posters, banners, logos, and social media graphics. My projects blend creativity and precision to deliver visually stunning results that captivate audiences. Let's transform your ideas into compelling visual content that stands out and makes a lasting impact.<br/><br/><span style="background:red;color:white; padding:4px 8px;border-top-left-radius:10px;border-bottom-right-radius:10px;">See More</span><br/><br/></p ></div>
+          </div>
+            
+        </div>
+        <div class="indicators">
+            <span class="indicator" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            
+        </div>
+      <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+ 
+    </div></div>
+  
+         </div>
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach((slider) => {
+        const slides = slider.querySelector('.slides');
+        const indicators = slider.querySelectorAll('.indicator');
+        const prevButton = slider.querySelector('.prev');
+        const nextButton = slider.querySelector('.next');
+        let currentIndex = 0;
+        const totalSlides = slider.querySelectorAll('.slide').length;
+
+        function goToSlide(index) {
+            if (index >= totalSlides) {
+                index = 0;
+            } else if (index < 0) {
+                index = totalSlides - 1;
+            }
+            slides.style.transform = `translateX(${-index * 100}%)`;
+            currentIndex = index;
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+                restartAutoSlide();
+            });
+        });
+
+        prevButton.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            restartAutoSlide();
+        });
+
+        nextButton.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            restartAutoSlide();
+        });
+
+        let autoSlideInterval = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 5000);
+
+        function restartAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 5000);
+        }
+
+        let startX = 0;
+        let isDragging = false;
+
+        slider.addEventListener('mousedown', (event) => {
+            startX = event.pageX;
+            isDragging = true;
+            clearInterval(autoSlideInterval);
+        });
+
+        slider.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+            const diffX = event.pageX - startX;
+            slides.style.transform = `translateX(${diffX - currentIndex * 100}%)`;
+        });
+
+        slider.addEventListener('mouseup', (event) => {
+            if (!isDragging) return;
+            const diffX = event.pageX - startX;
+            if (diffX > 100) {
+                goToSlide(currentIndex - 1);
+            } else if (diffX < -100) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(currentIndex);
+            }
+            isDragging = false;
+            restartAutoSlide();
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            if (!isDragging) return;
+            goToSlide(currentIndex);
+            isDragging = false;
+            restartAutoSlide();
+        });
+
+        slider.addEventListener('touchstart', (event) => {
+            startX = event.touches[0].pageX;
+            isDragging = true;
+            clearInterval(autoSlideInterval);
+        });
+
+        slider.addEventListener('touchmove', (event) => {
+            if (!isDragging) return;
+            const diffX = event.touches[0].pageX - startX;
+            slides.style.transform = `translateX(${diffX - currentIndex * 100}%)`;
+        });
+
+        slider.addEventListener('touchend', (event) => {
+            if (!isDragging) return;
+            const diffX = event.changedTouches[0].pageX - startX;
+            if (diffX > 100) {
+                goToSlide(currentIndex - 1);
+            } else if (diffX < -100) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(currentIndex);
+            }
+            isDragging = false;
+            restartAutoSlide();
+        });
+
+        goToSlide(currentIndex);
+    });
+});
+
+         </script>    
+         
+            <div style="display:none;" class="carousel">
+                <!-- list item -->
+              
+                <div style="display:none;" class="list">
+                    <div style="display:none;" class="item">
+                        <img src="images/image4.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title"></div>
+                            <div class="des">
+                                <!-- lorem 50 -->
+                                <a href="#" style="color: orangered;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:none;"class="item">
+                        <img src="images/image1.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title"></div>
+                            <div class="des">
+                                <a href="#" style="color: orangered;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:none;"class="item">
+                        <img src="images/image2.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title"></div>
+                            <div class="des">
+                                <a href="#" style="color: orangered;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:none;"class="item">
+                        <img src="images/image3.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title"></div>
+                            <div class="des">
+                                <a href="#"
+                                    style="color: orangered;"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <!-- list thumnail -->
+                <div style="display:none;" class="thumbnail flex">
+                    <div class="item">
+                        <img src="http://divyanshkaushal.me/images/image4.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://divyanshkaushal.me/images/image1.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://divyanshkaushal.me/images/image2.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://divyanshkaushal.me/images/image3.png" alt="divyansh">
+                        <div class="content">
+                            <div class="title">
+                                
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- next prev -->
+
+                <div style="display:none;"class="arrows">
+                    <button id="prev">
+                        < </button>
+                            <button id="next">></button>
+                </div>
+                <!-- time running -->
+                <div class="time"></div>
+            </div>
+        </div>
+    </section>
+      
+          
+       
+    
+           
+            
+
+    <section class="form-section" id="contacts">
+
+        <div class="form-header container">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="container flex" style="justify-content: center;">
+            <div class="wrapper">
+                <form action="https://formspree.io/f/mleqqrpn"
+
+method="POST">
+                    <div class="input-box flex">
+                        
+
+                        <input type="text" name="name" placeholder="Full name..." class="contact-input" required>
+
+                        <input type="email" name="email" placeholder="Email..." class="contact-input" required>
+
+                        <textarea name="messege" placeholder="Enter your messege..." class="contact-input"
+                            required></textarea>
+
+                        <button type="submit" class="btn">Submit <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container flex footer-flex">
+            <div  class="footer-header flex">
+                <h1>Follow ME</h1>
+                <h1><i class="fa-solid fa-arrow-right"></i></h1>
+            </div>
+
+            <div class="footer-link">
+                <a href="https://www.linkedin.com/in/shivamnox/">
+                    <h3><i class="fa-brands fa-linkedin-in link-hover"></i></h3>
+                </a>
+                <a href="https://www.instagram.com/shivamnox/">
+                    <h3><i class="fa-brands fa-instagram link-hover"></i></h3>
+                </a>
+                <a href="https://www.facebook.com/shivamnoxx">
+                    <h3><i class="fa-brands fa-facebook link-hover"></i></h3>
+                </a>
+                <a href="https://x.com/shivamnox">
+                    <h3><i class="fa-brands fa-x-twitter link-hover"></i></h3>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="subfooter">
+        <div class="container flex">
+            
+            <ul class="flex">
+                <li><a href="#" class="hover-links">Home</a></li>
+                <li><a href="#about" class="hover-links">About Me</a></li>
+                <li><a href="#skills" class="hover-links">Skills</a></li>
+                <li><a href="#projects" class="hover-links">Projects</a></li>
+            </ul>
+        </div>
+        <p style="text-align: center; font-size: 1rem;">@2024 All right reserved - ShivamnNox</p>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/0517857166.js" crossorigin="anonymous"></script>
+    <script src="http://divyanshkaushal.me/scripts.js"></script>
+</body>
+
+</html>
