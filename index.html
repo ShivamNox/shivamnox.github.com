@@ -720,6 +720,7 @@ graphic designer, "
     <div class="text-center">
         <button type="submit" class="btn">Send Message</button>
     </div>
+            <p id="my-form-status"></p>
 </form>
 
 <!-- Place this script at the end of the body tag -->
@@ -738,7 +739,7 @@ graphic designer, "
       }
     }).then(response => {
       if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
+        status.innerHTML = "Message Sent Successfully. I will contact back you soon.";
         form.reset()
       } else {
         response.json().then(data => {
