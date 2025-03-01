@@ -225,7 +225,7 @@ const form = document.querySelector(".email-form");
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'api-key': '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'
+                    'api-key': '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'
                 },
                 body: JSON.stringify(emailData)
             });
