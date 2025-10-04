@@ -1,358 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>ShivamNox | Backend Developer & Automation Engineer</title>
-  <meta name="description" content="backend developer, automation engineer, nodejs, python, api development, devops, ci/cd, docker, aws, cloud, database, rest‑api, shivamnox, shivam kumar" />
-  <meta name="keywords" content="backend developer, automation engineer, nodejs, python, api development, devops, ci/cd, docker, aws, cloud, database, rest‑api, shivamnox, shivam kumar" />
+  <meta
+    content="backend developer, automation engineer, nodejs, python, api development, devops, ci/cd, docker, aws, cloud, database, rest-api, shivamnox, shivam kumar" name="description" 
+  />
+  <meta
+    content="backend developer, automation engineer, nodejs, python, api development, devops, ci/cd, docker, aws, cloud, database, rest-api, shivamnox, shivam kumar"
+    name="keywords"
+  />
+
+  <meta name="theme-color" content="#0073aa" />
 
   <meta property="og:title" content="Shivam Kumar | Backend Developer & Automation Engineer" />
-  <meta property="og:description" content="Experienced in backend development, automation engineering, API design, cloud, CI/CD, and DevOps. Let’s build scalable and reliable systems together." />
+  <meta property="og:description"
+    content="Experienced in backend development, automation engineering, API design, cloud, CI/CD, and DevOps. Let's build scalable and reliable systems together." />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/172183580?v=4" />
   <meta property="og:url" content="https://shivamnox.github.io/" />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="favicon.ico" />
-
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512‑XXXXX" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicons -->
+  <link href="https://avatars.githubusercontent.com/u/172183580?v=4" rel="icon">
+  <link href="https://avatars.githubusercontent.com/u/172183580?v=4" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet">
 
-  <!-- Vendor / External CSS (Bootstrap, AOS, etc.) -->
-  <link href="assets/vendor/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/aos.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-
-  <style>
-    /* Inline fallback / small improvements */
-    body { font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6; background: #f4f4f4; }
-    a { color: #0073aa; }
-    a:hover { text-decoration: underline; }
-    .btn { display: inline-block; padding: 0.5rem 1rem; background: #0073aa; color: #fff; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; }
-    .btn-outline { background: transparent; border: 1px solid #0073aa; color: #0073aa; }
-    .section-title { text-align: center; margin-bottom: 2rem; }
-    .section-title h2 { font-size: 2rem; margin-bottom: 0.5rem; }
-    /* Lazy image placeholder style */
-    img.lazy { opacity: 0; transition: opacity 0.5s ease-in; }
-    img.lazy.loaded { opacity: 1; }
-    /* Simple responsive grid enhancements */
-    .row { display: flex; flex-wrap: wrap; margin: 0 -0.5rem; }
-    .col-half { width: 100%; padding: 0 0.5rem; }
-    @media (min-width: 768px) {
-      .col-half { width: 50%; }
-    }
-  </style>
+  <link href="assets/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Mobile nav toggle -->
-  <button class="mobile-nav-toggle d-xl-none" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
 
-  <!-- Header -->
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="Right Align"><i
+      class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
   <header id="header">
-    <div class="profile text-center" style="padding: 2rem 1rem; background: #fff;">
-      <img src="https://avatars.githubusercontent.com/u/172183580?v=4" alt="Shivam Kumar" class="rounded-circle lazy" width="150" height="150" loading="lazy" />
-      <h1><a href="#hero">Shivam Kumar</a></h1>
-      <p>Backend Developer & Automation Engineer</p>
-      <div class="social-links mt-3">
-        <a href="https://twitter.com/shivamnox" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com/in/shivamnox" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/shivamnox" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#hero"><i class="fa fa-home"></i> <span>Home</span></a></li>
-        <li><a href="#about"><i class="fa fa-user"></i> <span>About</span></a></li>
-        <li><a href="#projects"><i class="fa fa-folder-open"></i> Projects</a></li>
-        <li><a href="#services"><i class="fa fa-cogs"></i> Services</a></li>
-        <li><a href="#resume"><i class="fa fa-file-alt"></i> Resume</a></li>
-        <li><a href="#contact"><i class="fa fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="d-flex flex-column">
 
-  <!-- Hero / Intro -->
-  <section id="hero" class="d-flex justify-content-center align-items-center" style="height: 60vh; background: #fff; margin-bottom: 2rem;">
+      <div class="profile">
+        <img src="https://avatars.githubusercontent.com/u/172183580?v=4" alt="Shivam Kumar Image" class="img-fluid rounded-circle" width="512"
+          height="512">
+        <h1 class="text-light"><a rel="noopener" href="/">Shivam Kumar</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a rel="noopener" href="https://twitter.com/shivamnox" class="twitter" target="_blank"><i
+              class="bx bxl-twitter"></i></a>
+          <a rel="noopener" href="https://www.linkedin.com/in/shivamnox/" class="linkedin" target="_blank"><i
+              class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/shivamnox" class="github" target="_blank"><i class="bx bxl-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class=""><a rel="noopener" href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a rel="noopener" href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a rel="noopener" href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a rel="noopener" href="#services"><i class="bx bx-server"></i> Services</a></li>
+          <li><a rel="noopener" href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a rel="noopener" href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="Right Align"><i
+          class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Shivam Kumar</h1>
       <p>I'm <span class="typed" data-typed-items="Backend Developer, Automation Engineer, DevOps Enthusiast"></span></p>
     </div>
   </section>
+  <!-- End Hero -->
 
   <main id="main">
 
-    <!-- About Section -->
-    <section id="about" class="about section-bg" style="padding: 3rem 1rem; background: #fff;">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container">
-        <div class="section-title"><h2>About Me</h2></div>
+
+       <div class="section-title">
+        <h2>About Me</h2>
         <p>
-          I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating infrastructure. My expertise includes Node.js, Python, REST APIs, CI/CD, Docker, AWS/GCP, and DevOps practices. I thrive on solving challenging problems and delivering efficient, reliable, and secure solutions.
+          I am a passionate Backend Developer & Automation Engineer with a strong background in building robust APIs, designing scalable backend systems, and automating cloud infrastructure. My expertise includes Node.js, Python, CI/CD, Docker, cloud solutions (AWS, GCP), and DevOps practices. I thrive on solving challenging problems and delivering reliable, efficient, and secure solutions.
         </p>
-        <div class="download-resume" style="text-align: center; margin-top: 1.5rem;">
-          <a href="ShivamKumar_Resume.pdf" class="btn" download>Download ATS‑Friendly Resume (PDF)</a>
-        </div>
-      </div>
-    </section>
+       </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section-bg" style="padding: 3rem 1rem;">
+        <div class="row about-me-row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="https://avatars.githubusercontent.com/u/172183580?v=4" class="img-fluid profile-image" alt="Shivam Kumar Profile Image"
+              width="600" height="570">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Backend Developer & Automation Engineer</h3>
+            <p class="font-italic">
+              <i class="fas fa-snowflake"></i> Specializing in RESTful API development, automation scripting, and cloud-native deployments.<br>
+              <i class="fas fa-snowflake"></i> Experienced in setting up CI/CD pipelines, containerization, and infrastructure as code.<br>
+              <i class="fas fa-snowflake"></i> Fast learner, problem-solver, and team player, always eager to learn new technologies.
+            </p>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> <a rel="noopener"
+                      href="tel:+919568334171">+91 9568334171</a></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> <a rel="noopener"
+                      href="mailto:shivamnox0@gmail.com">shivamnox0@gmail.com</a></li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Github:</strong> <a rel="noopener"
+                      href="https://github.com/shivamnox" target="_blank">Github Profile</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> B.Tech. in CSE</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Meerut, UP, India.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container">
-        <div class="section-title"><h2>Skills</h2></div>
-        <div class="row">
-          <div class="col-half">
-            <h3>Backend & APIs</h3>
-            <ul>
-              <li>Node.js & Express</li>
-              <li>Python (Flask / Django)</li>
-              <li>REST, GraphQL</li>
-              <li>SQL (PostgreSQL, MySQL)</li>
-              <li>NoSQL (MongoDB, Redis)</li>
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>
+            Here are some of my backend and automation projects. These demonstrate my skills in API development, automation scripting, cloud deployments, and DevOps.
+          </p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-backend">Backend</li>
+              <li data-filter=".filter-automation">Automation</li>
+              <li data-filter=".filter-devops">DevOps</li>
             </ul>
           </div>
-          <div class="col-half">
-            <h3>DevOps & Automation</h3>
-            <ul>
-              <li>Docker, Kubernetes</li>
-              <li>AWS / GCP / Cloud Services</li>
-              <li>CI/CD (GitHub Actions, Jenkins)</li>
-              <li>Scripting (Python, Bash)</li>
-              <li>Infrastructure as Code (Terraform)</li>
-            </ul>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+            <div class="project-card">
+              <div class="card-image">
+                <img src="https://miro.medium.com/v2/resize:fit:800/format:webp/1*eQ6yIuE6Q6Jp5E6xkQv0zQ.png" class="img-fluid" alt="API Project">
+              </div>
+              <div class="card-content">
+                <h2 class="project-title">RESTful API for E-commerce</h2>
+                <p class="project-description">Designed and implemented secure, scalable REST APIs in Node.js and Express, integrated with MongoDB and Redis, deployed on AWS.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-automation">
+            <div class="project-card">
+              <div class="card-image">
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1668436796595/gqM2bL0tM.png" class="img-fluid" alt="Automation Project">
+              </div>
+              <div class="card-content">
+                <h2 class="project-title">CI/CD Pipeline Automation</h2>
+                <p class="project-description">Set up automated CI/CD pipelines using GitHub Actions and Docker for test, build, and deployment workflows.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-devops">
+            <div class="project-card">
+              <div class="card-image">
+                <img src="https://www.docker.com/wp-content/uploads/2022/03/desktop-logo.png" class="img-fluid" alt="DevOps Project">
+              </div>
+              <div class="card-content">
+                <h2 class="project-title">Infrastructure as Code (IaC)</h2>
+                <p class="project-description">Automated infrastructure provisioning with Terraform on AWS and GCP. Configured Docker and Kubernetes for scalable deployments.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>
+            I offer a range of backend and automation engineering services to help teams build, scale, and automate infrastructure and systems.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-code"></i></div>
+            <h3 class="title"><a rel="noopener" href="#portfolio">Backend Development</a></h3>
+            <p class="description">Building RESTful APIs, microservices, authentication, and scalable backend architectures using Node.js, Express, Python, and more.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-automation"></i></div>
+            <h3 class="title"><a rel="noopener" href="#portfolio">Automation & Scripting</a></h3>
+            <p class="description">Automation of workflows using Python, Bash, and Node.js scripts for testing, deployment, and monitoring.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-cloud"></i></div>
+            <h3 class="title"><a rel="noopener" href="#portfolio">Cloud & DevOps</a></h3>
+            <p class="description">Cloud infrastructure setup (AWS, GCP), CI/CD pipeline implementation, Docker, Kubernetes, and Infrastructure as Code (IaC).</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-database"></i></div>
+            <h3 class="title"><a rel="noopener" href="#portfolio">Database Engineering</a></h3>
+            <p class="description">Design, optimization, and management of SQL and NoSQL databases (PostgreSQL, MySQL, MongoDB, Redis).</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-bug"></i></div>
+            <h3 class="title"><a rel="noopener" href="#portfolio">Testing & QA Automation</a></h3>
+            <p class="description">Automated testing (unit, integration, end-to-end) and quality assurance using modern frameworks.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-support"></i></div>
+            <h4 class="title"><a rel="noopener" href="#contact">Consulting & Support</a></h4>
+            <p class="description">Consultation on backend architecture, automation, and DevOps best practices. Ongoing support available.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>
+            Here are some of the technologies and tools I work with as a backend developer and automation engineer.
+          </p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="progress">
+              <span class="skill">Node.js & Express <i class="val">90%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">Python <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">REST API / GraphQL <i class="val">90%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">SQL (PostgreSQL/MySQL) <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">MongoDB / Redis <i class="val">75%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="progress">
+              <span class="skill">Docker & Kubernetes <i class="val">80%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">AWS / GCP <i class="val">70%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">CI/CD (GitHub Actions, Jenkins) <i class="val">80%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">Automation Scripting (Python, Bash, JS) <i class="val">85%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="progress">
+              <span class="skill">Git & Version Control <i class="val">95%</i></span>
+              <div class="progress-bar-wrap"><div class="progress-bar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </section><!-- End Skills Section -->
 
-    <!-- Projects Section -->
-    <section id="projects" class="portfolio section-bg" style="padding: 3rem 1rem; background: #fff;">
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
       <div class="container">
-        <div class="section-title"><h2>Projects</h2></div>
+
+       <div class="section-title">
+        <h2>Resume</h2>
+        <p>
+          Backend Developer & Automation Engineer skilled in Node.js, Python, cloud, databases, and DevOps. Focused on building scalable systems, automating processes, and delivering robust backend solutions.
+        </p>
+       </div>
+
         <div class="row">
-          <!-- Project 1 -->
-          <div class="col-half" data-aos="fade-up">
-            <div class="project-card" style="background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-              <img src="https://miro.medium.com/v2/resize:fit:800/format:webp/1*eQ6yIuE6Q6Jp5E6xkQv0zQ.png" alt="Ecommerce API Project" class="lazy" loading="lazy" />
-              <h3>RESTful API for E-commerce</h3>
-              <p>Built secure and scalable REST APIs using Node.js, Express, integrated with MongoDB & Redis. Deployed on AWS.</p>
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Shivam Kumar</h4>
+              <ul>
+                <li>Backend Developer & Automation Engineer</li>
+                <li>Meerut, UP, India</li>
+                <li><a href="mailto:shivamnox0@gmail.com">shivamnox0@gmail.com</a></li>
+              </ul>
               <p>
-                <a href="https://github.com/shivamnox/ecommerce-api" target="_blank" class="btn btn-small">View Code</a>
-                <a href="https://ecommerce-api-demo.example.com" target="_blank" class="btn btn-small btn-outline">Live Demo</a>
+                <em>
+                  Experienced in backend development and automation. Proficient in Node.js, Python, REST APIs, Docker, CI/CD, AWS, and infrastructure automation.
+                </em>
               </p>
             </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="col-half" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-card" style="background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1668436796595/gqM2bL0tM.png" alt="CI/CD Pipeline Project" class="lazy" loading="lazy" />
-              <h3>CI/CD Pipeline Automation</h3>
-              <p>Configured GitHub Actions + Docker to automatically build, test, and deploy applications.</p>
-              <p>
-                <a href="https://github.com/shivamnox/ci-cd-pipeline" target="_blank" class="btn btn-small">View Code</a>
-              </p>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="col-half" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card" style="background: #f9f9f9; padding: 1rem; border-radius: 8px;">
-              <img src="https://www.docker.com/wp-content/uploads/2022/03/desktop-logo.png" alt="IaC / DevOps Project" class="lazy" loading="lazy" />
-              <h3>Infrastructure as Code (IaC)</h3>
-              <p>Automated provisioning using Terraform on AWS & GCP; container orchestration with Kubernetes.</p>
-              <p>
-                <a href="https://github.com/shivamnox/terraform-cloud-infra" target="_blank" class="btn btn-small">View Code</a>
-              </p>
-            </div>
-          </div>
-          <!-- Add more projects similarly -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section-bg" style="padding: 3rem 1rem;">
-      <div class="container">
-        <div class="section-title"><h2>Services</h2></div>
-        <div class="row">
-          <div class="col-half" data-aos="fade-up">
-            <div class="icon-box">
-              <i class="fa fa-code"></i>
-              <h3><a href="#projects">Backend Development</a></h3>
-              <p>Designing APIs, microservices, authentication, and scalable backend architecture using Node.js, Python, etc.</p>
-            </div>
-          </div>
-          <div class="col-half" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box">
-              <i class="fa fa-robot"></i>
-              <h3><a href="#projects">Automation & Scripting</a></h3>
-              <p>Automating workflows, deployments, testing using Python, Bash, JS, etc.</p>
-            </div>
-          </div>
-          <div class="col-half" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <i class="fa fa-cloud"></i>
-              <h3><a href="#projects">Cloud & DevOps</a></h3>
-              <p>Setting up AWS/GCP infra, CI/CD, containerization, and Infrastructure as Code.</p>
-            </div>
-          </div>
-          <div class="col-half" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="fa fa-database"></i>
-              <h3><a href="#projects">Database Engineering</a></h3>
-              <p>Design, tuning, and maintenance of SQL & NoSQL databases (PostgreSQL, Mongo, Redis).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume / Experience Section -->
-    <section id="resume" class="resume section-bg" style="padding: 3rem 1rem; background: #fff;">
-      <div class="container">
-        <div class="section-title"><h2>Resume</h2></div>
-        <div class="row">
-          <div class="col-half" data-aos="fade-up">
-            <h3>Summary</h3>
-            <p><strong>Shivam Kumar</strong></p>
-            <p>Backend Developer & Automation Engineer</p>
-            <p><em>Experienced in backend development, automation, cloud, containers, CI/CD, and infrastructure automation.</em></p>
-
-            <h3>Experience</h3>
+            <h3 class="resume-title">Experience</h3>
             <div class="resume-item">
               <h4>Backend Engineer (Freelance)</h4>
-              <h5>2022 – Present</h5>
-              <ul>
-                <li>Built and deployed RESTful APIs for clients in e-commerce & SaaS spaces.</li>
-                <li>Automated infrastructure using Docker, GitHub Actions, Terraform.</li>
-                <li>Integrated third-party services, implemented authentication & authorization flows.</li>
-              </ul>
+              <h5>2022 - Present</h5>
+              <p>
+                <ul>
+                  <li>Developed and deployed RESTful APIs for clients in e-commerce and SaaS domains.</li>
+                  <li>Automated infrastructure with Docker, GitHub Actions, and Terraform.</li>
+                  <li>Integrated third-party services and implemented robust authentication systems.</li>
+                </ul>
+              </p>
             </div>
-            <!-- additional roles can go here -->
           </div>
-          <div class="col-half" data-aos="fade-up" data-aos-delay="100">
-            <h3>Education</h3>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>B.Tech. in Computer Science & Engineering</h4>
-              <h5>2022 – 2026</h5>
-              <p>Delhi Institute of Engineering & Technology, Meerut</p>
-              <p>CGPA: 7.2 (Up to 5th semester)</p>
+              <h5>2022 - 2026</h5>
+              <p><em><a rel="noopener" href="https://www.dietmeerut.com/" target="_blank">Delhi Institute of Engineering and Technology, Meerut</a></em></p>
+              <ul>
+                <li>CGPA 7.2 Up to 5th Semester</li>
+              </ul>
             </div>
             <div class="resume-item">
               <h4>Intermediate</h4>
               <h5>2022</h5>
-              <p>Sir Ram Dayal Inter College, Meerut</p>
+              <p><em>Sir Ram Dayal Inter College, Meerut</em></p>
             </div>
             <div class="resume-item">
-              <h4>High School</h4>
+              <h4>Highschool</h4>
               <h5>2020</h5>
-              <p>Sir Ram Dayal Inter College, Meerut</p>
+              <p><em>Sir Ram Dayal Inter College, Meerut</em></p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-bg" style="padding: 3rem 1rem;">
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
       <div class="container">
-        <div class="section-title"><h2>Contact</h2></div>
-        <div class="row">
-          <div class="col-half" data-aos="fade-up">
-            <ul>
-              <li><strong>Email:</strong> <a href="mailto:shivamnox0@gmail.com">shivamnox0@gmail.com</a></li>
-              <li><strong>Phone:</strong> <a href="tel:+919568334171">+91 95683 34171</a></li>
-              <li><strong>Location:</strong> Meerut, UP, India</li>
-            </ul>
+
+        <div class="section-title">
+          <h2>Get in Touch</h2>
+          <p>
+            Interested in working together, or have a question about backend development or automation? Reach out by email or use the form below.
+          </p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h3>Location:</h3>
+                <p>Meerut, UP, India</p>
+              </div>
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h3>Email:</h3>
+                <p><a rel="noopener" href="mailto:shivamnox0@gmail.com">shivamnox0@gmail.com</a></p>
+              </div>
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h3>Call:</h3>
+                <p><a rel="noopener" href="tel:+919568334171">+91 9568334171</a></p>
+              </div>
+            </div>
           </div>
-          <div class="col-half" data-aos="fade-up" data-aos-delay="100">
-            <form id="contact-form" action="https://formspree.io/f/mleqqrpn" method="POST">
-              <div>
-                <label for="name">Your Name</label><br />
-                <input type="text" id="name" name="name" required style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form id="my-form" class="email-form" action="https://formspree.io/f/mleqqrpn" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name: </label>
+                <input class="form-control" type="text" placeholder="NAME" id="input-name" name="input-name" required autocomplete="name" />
               </div>
-              <div>
-                <label for="email">Your Email</label><br />
-                <input type="email" id="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
+              <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input class="form-control" type="email" placeholder="EMAIL" inputmode="email" id="input-email" name="input-email" required autocomplete="email" />
               </div>
-              <div>
-                <label for="message">Message</label><br />
-                <textarea id="message" name="message" rows="5" required style="width:100%; padding:0.5rem;"></textarea>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" name="input-message" id="input-message" rows="7" placeholder="MESSAGE" required></textarea>
               </div>
-              <div style="margin-top: 0.5rem;">
+              <div class="text-center">
                 <button type="submit" class="btn">Send Message</button>
               </div>
+              <p id="my-form-status"></p>
             </form>
+            <script>
+              var form = document.getElementById("my-form");
+              async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                    'Accept': 'application/json'
+                  }
+                }).then(response => {
+                  if (response.ok) {
+                    status.innerHTML = "Message Sent Successfully. I will contact back you soon.";
+                    form.reset()
+                  } else {
+                    response.json().then(data => {
+                      if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                      } else {
+                        status.innerHTML = "Oops! There was a problem submitting your form"
+                      }
+                    })
+                  }
+                }).catch(error => {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                });
+              }
+              form.addEventListener("submit", handleSubmit)
+            </script>
           </div>
+
         </div>
+
       </div>
-    </section>
+    </section><!-- End Contact Section -->
 
-  </main>
+  </main><!-- End #main -->
 
-  <footer style="text-align: center; padding: 1rem; background: #fff; margin-top: 2rem;">
-    &copy; 2025 Shivam Kumar. All rights reserved.
-  </footer>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2025<strong><span>ShivamNox</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top" style="position: fixed; right: 1rem; bottom: 1rem; background: #0073aa; color: #fff; padding: 0.5rem; border-radius: 50%; text-decoration: none;">
-    <i class="fas fa-chevron-up"></i>
-  </a>
+  <a rel="noopener" href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-  <!-- Vendor JS (jQuery, Bootstrap, AOS, etc.) -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos.js"></script>
+  <script src="assets/vendor/jquery.easing.min.js"></script>
+  <script src="assets/vendor/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup.min.js"></script>
+  <script src="assets/vendor/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.min.js"></script>
+  <script src="assets/vendor/aos.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <script>
-    // Initialize AOS
-    AOS.init({ duration: 800, easing: 'ease-in-out' });
-
-    // Typed.js (hero text animation)
-    const typed = new Typed('.typed', {
-      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-      loop: true
-    });
-
-    // Lazy load images
-    document.addEventListener("DOMContentLoaded", function() {
-      const lazyImgs = document.querySelectorAll('img.lazy');
-      lazyImgs.forEach(img => {
-        img.addEventListener('load', () => {
-          img.classList.add('loaded');
-        });
-      });
-    });
-
-    // Contact form submit handler (optional enhancement)
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const statusEl = document.createElement('p');
-      form.appendChild(statusEl);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          statusEl.innerText = "Message sent successfully! Thank you.";
-          form.reset();
-        } else {
-          const data = await response.json();
-          statusEl.innerText = data.errors ? data.errors.map(e => e.message).join(", ") : "Error sending message.";
-        }
-      } catch (err) {
-        statusEl.innerText = "Oops! There was a problem submitting the form.";
-      }
-    });
-  </script>
 </body>
 </html>
