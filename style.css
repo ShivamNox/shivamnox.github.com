@@ -256,7 +256,9 @@
       color: var(--accent);
       text-decoration: none;
     }
-
+#projects {
+    background:#f8f9fa;
+}
     #portfolio-flters {
       list-style: none;
       display: flex;
