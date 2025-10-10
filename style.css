@@ -804,3 +804,55 @@
         font-size: 1.75rem;
       }
     }
+
+
+/* ========================================
+   MOBILE SIDEBAR SCROLL FIX
+   Add these rules to your existing style.css
+   ======================================== */
+
+/* Fix for Samsung and small mobile screens */
+@media (max-width: 1024px) {
+  
+  /* Prevent sidebar from moving up when scrolling */
+  #header {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Change from left: 0 to left: -300px */
+    transform: none; /* Remove any existing transform */
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for better mobile support */
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overscroll-behavior: contain; /* Prevent scroll bounce issues */
+  }
+
+  /* Show sidebar when mobile nav is active */
+  #header.mobile-nav-active {
+    left: 0; /* Slide in from left */
+  }
+
+  /* Lock body scroll when sidebar is open - CRITICAL FIX */
+  body.mobile-nav-active {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/* Extra fix for very small screens (Samsung Galaxy, iPhone SE, etc.) */
+@media (max-width: 480px) {
+  
+  #header {
+    width: 280px; /* Slightly smaller width for small screens */
+    left: -280px;
+  }
+  
+  /* Ensure no gaps at bottom */
+  #header {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
