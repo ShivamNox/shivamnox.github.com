@@ -299,13 +299,6 @@
         max-width: 400px;
       }
     }
-
-    @media (max-width:700px) {
-      .project-card {
-        max-width: 270px;
-      }
-    }
-
     .project-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -810,74 +803,3 @@
         font-size: 1.75rem;
       }
     }
-
-
-/* ========================================
-   MOBILE SIDEBAR SCROLL FIX - FINAL SOLUTION
-   Add these rules to your existing style.css
-   ======================================== */
-
-/* Fix for all mobile screens including Samsung */
-@media (max-width: 1024px) {
-  
-  /* Sidebar positioning - use transform instead of left */
-  #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    height: 100%;
-    transform: translateX(-100%); /* Hide by default */
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    z-index: 9997;
-  }
-
-  /* Show sidebar when active */
-  #header.mobile-nav-active {
-    transform: translateX(0); /* Slide in */
-  }
-
-  /* CRITICAL: Lock body scroll when sidebar is open */
-  body.mobile-nav-active {
-    overflow: hidden !important;
-    position: fixed !important;
-    width: 100% !important;
-    height: 100vh !important;
-  }
-
-  /* Lock main content too */
-  body.mobile-nav-active #main {
-    overflow: hidden !important;
-    position: fixed !important;
-  }
-}
-
-/* For very small screens */
-@media (max-width: 480px) {
-  #header {
-    width: 280px;
-  }
-}
-
-/* Optional: Add overlay background when sidebar is open */
-body.mobile-nav-active::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9996;
-  display: block;
-}
-
-@media (min-width: 1025px) {
-  body.mobile-nav-active::before {
-    display: none;
-  }
-}
