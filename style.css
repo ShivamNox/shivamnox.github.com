@@ -804,8 +804,13 @@
       }
     }
 
+/* Prevent body scroll when mobile menu is open */
 .no-scroll {
+  position: fixed;
+  width: 100%;
   overflow: hidden;
   height: 100vh;
+  top: 0;
 }
+
 
