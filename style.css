@@ -300,6 +300,12 @@
       }
     }
 
+    @media (max-width:700px) {
+      .project-card {
+        max-width: 270px;
+      }
+    }
+
     .project-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
