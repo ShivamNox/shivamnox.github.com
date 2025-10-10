@@ -77,39 +77,62 @@
     });
 
     // Mobile Navigation Toggle
+// Mobile Navigation Toggle - UPDATED
 function toggleMobileNav() {
   const header = document.getElementById('header');
+  const body = document.body;
+  
+  // Toggle classes
   header.classList.toggle('mobile-nav-active');
-
-  // Disable or enable scroll based on mobile nav state
-  if (header.classList.contains('mobile-nav-active')) {
-    document.body.classList.add('no-scroll');
+  body.classList.toggle('mobile-nav-active');
+  
+  // Extra safety: force scroll lock
+  if (body.classList.contains('mobile-nav-active')) {
+    // Save current scroll position
+    const scrollY = window.scrollY;
+    body.style.top = `-${scrollY}px`;
   } else {
-    document.body.classList.remove('no-scroll');
+    // Restore scroll position
+    const scrollY = body.style.top;
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 }
 
-
-    // Close mobile nav when clicking outside
-document.addEventListener('click', function(e) {
-  const header = document.getElementById('header');
-  const toggle = document.querySelector('.mobile-nav-toggle');
-  if (header.classList.contains('mobile-nav-active') && 
-      !header.contains(e.target) && 
-      !toggle.contains(e.target)) {
-    header.classList.remove('mobile-nav-active');
-    document.body.classList.remove('no-scroll'); // <- Add this line
-  }
-});
-
-
-    // Close mobile nav when clicking a link
+// Close sidebar when clicking on menu links
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', function() {
     const header = document.getElementById('header');
+    const body = document.body;
+    
+    // Remove active classes
     header.classList.remove('mobile-nav-active');
-    document.body.classList.remove('no-scroll'); // <- Add this line
+    body.classList.remove('mobile-nav-active');
+    
+    // Restore scroll
+    const scrollY = body.style.top;
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
+});
+
+// Close sidebar when clicking outside (on overlay)
+document.addEventListener('click', function(e) {
+  const header = document.getElementById('header');
+  const body = document.body;
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  
+  if (body.classList.contains('mobile-nav-active')) {
+    if (!header.contains(e.target) && !toggle.contains(e.target)) {
+      header.classList.remove('mobile-nav-active');
+      body.classList.remove('mobile-nav-active');
+      
+      // Restore scroll
+      const scrollY = body.style.top;
+      body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+  }
 });
 
     // Active navigation based on scroll
