@@ -803,3 +803,9 @@
         font-size: 1.75rem;
       }
     }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
