@@ -77,29 +77,40 @@
     });
 
     // Mobile Navigation Toggle
-    function toggleMobileNav() {
-      const header = document.getElementById('header');
-      header.classList.toggle('mobile-nav-active');
-    }
+function toggleMobileNav() {
+  const header = document.getElementById('header');
+  header.classList.toggle('mobile-nav-active');
+
+  // Disable or enable scroll based on mobile nav state
+  if (header.classList.contains('mobile-nav-active')) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+}
+
 
     // Close mobile nav when clicking outside
-    document.addEventListener('click', function(e) {
-      const header = document.getElementById('header');
-      const toggle = document.querySelector('.mobile-nav-toggle');
-      if (header.classList.contains('mobile-nav-active') && 
-          !header.contains(e.target) && 
-          !toggle.contains(e.target)) {
-        header.classList.remove('mobile-nav-active');
-      }
-    });
+document.addEventListener('click', function(e) {
+  const header = document.getElementById('header');
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  if (header.classList.contains('mobile-nav-active') && 
+      !header.contains(e.target) && 
+      !toggle.contains(e.target)) {
+    header.classList.remove('mobile-nav-active');
+    document.body.classList.remove('no-scroll'); // <- Add this line
+  }
+});
+
 
     // Close mobile nav when clicking a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', function() {
-        const header = document.getElementById('header');
-        header.classList.remove('mobile-nav-active');
-      });
-    });
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', function() {
+    const header = document.getElementById('header');
+    header.classList.remove('mobile-nav-active');
+    document.body.classList.remove('no-scroll'); // <- Add this line
+  });
+});
 
     // Active navigation based on scroll
     window.addEventListener('scroll', function() {
