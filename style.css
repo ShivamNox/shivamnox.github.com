@@ -376,6 +376,14 @@
       left: 100%;
     }
 
+    .project-image img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover; /* ya contain */
+       object-position: center;
+       display: block;
+    }
+
     .project-content {
       padding: 1.5rem;
     }
